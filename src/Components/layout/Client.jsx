@@ -511,6 +511,7 @@ function Client() {
                   >
                     <i className="fas fa-trash"></i> Delete
                   </button>
+                  
                 </td>
               </tr>
             ))}

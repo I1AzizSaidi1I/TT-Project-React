@@ -18,6 +18,7 @@ const NavBar = () => {
       const response = await axios.post("http://localhost:8000/api/logout", {}, config);
       console.log(response.data); 
       localStorage.removeItem('token');
+      
       navigate("/login")
     } catch (error) {
       console.error('Error logging out:', error);
