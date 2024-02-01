@@ -3,11 +3,12 @@
 //! author : Tarmo Aidantausta : https://github.com/bleadof
 
 ;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined'
+    && typeof require === 'function' ? factory(require('../moment')) :
+        typeof define === 'function' && define.amd ? define(['../moment'], factory) :
+            factory(global.moment)
+}(this, (function (moment) {
+    'use strict';
 
     //! moment.js locale configuration
 
@@ -26,6 +27,7 @@
             numbersPast[8],
             numbersPast[9],
         ];
+
     function translate(number, withoutSuffix, key, isFuture) {
         var result = '';
         switch (key) {
@@ -63,6 +65,7 @@
         result = verbalNumber(number, isFuture) + ' ' + result;
         return result;
     }
+
     function verbalNumber(number, isFuture) {
         return number < 10
             ? isFuture
