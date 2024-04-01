@@ -119,7 +119,7 @@ function Client() {
                 cancelButtonColor: "#d33",
                 confirmButtonText: "Yes, delete it!",
             });
-
+    
             // If the user clicks "Yes"
             if (result.isConfirmed) {
                 await axios.delete(`http://localhost:8000/api/clients/${clientId}`);
@@ -127,7 +127,7 @@ function Client() {
                     prevClients.filter((client) => client.id !== clientId)
                 );
                 console.log("Client deleted successfully");
-
+    
                 // Show a success alert
                 Swal.fire("Deleted!", "The client has been deleted.", "success");
             }
@@ -141,7 +141,11 @@ function Client() {
             );
         }
     };
+    
 
+   
+
+    // Function to select client for update
     const handleSelectClientForUpdate = (client) => {
         setUpdateNewClientLastName(client.first_name);
         setUpdateNewClientFirstName(client.last_name);
@@ -152,6 +156,8 @@ function Client() {
         setShowUpdateModal(true);
         console.log(client.id);
     };
+
+    // Function to update client
 
     const handleUpdateClient = async () => {
         try {
@@ -197,12 +203,9 @@ function Client() {
         }
     };
 
-    //handling invoice Modal
+  
 
-    // Function to open the modal
-
-    // Function to open the modal
-
+    // Handling  modal
 
     const handleShowModal = () => setShowModal(true);
     const handleCloseModal = () => setShowModal(false);

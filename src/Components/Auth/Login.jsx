@@ -79,14 +79,9 @@ const Login = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-8">
-                                <div className="icheck-primary">
-                                    <input type="checkbox" id="remember"/>
-                                    <label htmlFor="remember">Remember Me</label>
-                                </div>
-                            </div>
+                           
 
-                            <div className="col-4">
+                            <div className="col-12 mb-2">
                                 <button
                                     type="button"
                                     onClick={login}
@@ -96,11 +91,7 @@ const Login = () => {
                                 </button>
                             </div>
                         </div>
-                        <p className="mb-0">
-                            <Link to="/register" className="text-center">
-                                Register a new membership
-                            </Link>
-                        </p>
+                       
                     </div>
                 </div>
             </div>

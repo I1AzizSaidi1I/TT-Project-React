@@ -31,13 +31,13 @@ const SideBar = () => {
         } else {
             console.log("User object or role ID not stored in local storage.");
         }
-    }, []); // Empty dependency array ensures useEffect runs only once
+    }, []); 
 
 
     return (
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
             {/* Brand Logo */}
-            <a href="#" className="brand-link">
+            <a  className="brand-link">
                 <img
                     src="/src/resources/dist/img/LOGO_TT_.png"
                     alt="AdminLTE Logo"
@@ -51,11 +51,11 @@ const SideBar = () => {
                 {/* Sidebar user (optional) */}
                 <div className="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div className="image">
-                        <MdOutlineAdminPanelSettings style={{width: "100%"}}/>
+                        <MdOutlineAdminPanelSettings style={{width: "100%", color: "white"}}/>
                     </div>
                     <div className="info">
-                        <a href="#" className="d-block">
-                            Admin
+                        <a className="d-block">
+                        {Employee_id ? "Employee" : "Admin"}
                         </a>
                     </div>
                 </div>
@@ -68,12 +68,7 @@ const SideBar = () => {
                         role="menu"
                         data-accordion="false"
                     >
-                        <li className="nav-item">
-                            <a href="#" className="nav-link">
-                                <i className="nav-icon fas fa-tachometer-alt"/>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
+                       
                         {Admin_id && (
                             <>
                                 <li className="nav-item">
